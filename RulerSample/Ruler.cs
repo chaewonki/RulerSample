@@ -5,7 +5,6 @@ using System.Windows.Shapes;
 
 public class Ruler : Shape
 {
-
     // Dependency Property 
     public static readonly DependencyProperty X1Property = DependencyProperty.Register(
         "X1", typeof(double), typeof(Ruler), new FrameworkPropertyMetadata(0.0, FrameworkPropertyMetadataOptions.AffectsRender));
@@ -90,7 +89,7 @@ public class Ruler : Shape
         double interval = 10.0;
         double tickLength = 10.0;
 
-        Vector lineVector = new Vector(X2-X1, Y2 - Y1);
+        Vector lineVector = new Vector(X2 - X1, Y2 - Y1);
         double lineLength = lineVector.Length;
         lineVector.Normalize();
 
